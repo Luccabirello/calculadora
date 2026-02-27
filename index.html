@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator" id="calc">
+        <div class="display">
+            <div id="history"></div>
+            <div id="current">0</div>
+        </div>
+        
+        <button class="toggle-btn" onclick="toggleMode()">Alternar Modo Científico</button>
+
+        <div class="keypad">
+            <div class="grid-main">
+                <button class="btn btn-action" onclick="clearAll()">AC</button>
+                <button class="btn btn-action" onclick="deleteDigit()">DEL</button>
+                <button class="btn btn-action" onclick="appendOperator('%')">%</button>
+                <button class="btn btn-op" onclick="appendOperator('/')">÷</button>
+
+                <button class="btn" onclick="appendNumber('7')">7</button>
+                <button class="btn" onclick="appendNumber('8')">8</button>
+                <button class="btn" onclick="appendNumber('9')">9</button>
+                <button class="btn btn-op" onclick="appendOperator('*')">×</button>
+
+                <button class="btn" onclick="appendNumber('4')">4</button>
+                <button class="btn" onclick="appendNumber('5')">5</button>
+                <button class="btn" onclick="appendNumber('6')">6</button>
+                <button class="btn btn-op" onclick="appendOperator('-')">−</button>
+
+                <button class="btn" onclick="appendNumber('1')">1</button>
+                <button class="btn" onclick="appendNumber('2')">2</button>
+                <button class="btn" onclick="appendNumber('3')">3</button>
+                <button class="btn btn-op" onclick="appendOperator('+')">+</button>
+
+                <button class="btn btn-zero" onclick="appendNumber('0')">0</button>
+                <button class="btn" onclick="appendNumber('.')">.</button>
+                <button class="btn btn-equal" onclick="compute()">=</button>
+            </div>
+
+            <div class="grid-sci hidden" id="sci-keys">
+                <button class="btn btn-sci" onclick="execSci('sin')">sin</button>
+                <button class="btn btn-sci" onclick="execSci('cos')">cos</button>
+                <button class="btn btn-sci" onclick="execSci('tan')">tan</button>
+                <button class="btn btn-sci" onclick="appendNumber('3.14159')">π</button>
+                <button class="btn btn-sci" onclick="execSci('fact')">x!</button>
+                <button class="btn btn-sci" onclick="appendOperator('**')">xʸ</button>
+                <button class="btn btn-sci" onclick="execSci('sqrt')">√</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body { background: #1c1c1c; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; }
+.calculator { background: #000; padding: 20px; border-radius: 30px; width: 320px; transition: 0.3s; }
+.calculator.wide { width: 460px; }
+.display { text-align: right; padding: 20px; min-height: 100px; }
+#history { color: #888; font-size: 1.1rem; height: 20px; }
+#current { color: #fff; font-size: 3.5rem; margin-top: 10px; overflow: hidden; }
+.toggle-btn { width: 100%; background: #333; color: #fff; border: none; padding: 10px; border-radius: 10px; margin-bottom: 20px; cursor: pointer; }
+.keypad { display: flex; gap: 10px; }
+.grid-main { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; flex: 3; }
+.grid-sci { display: grid; grid-template-columns: 1fr; gap: 10px; flex: 1; }
+.btn { height: 60px; border-radius: 50%; border: none; font-size: 1.4rem; cursor: pointer; background: #333; color: white; }
+.btn-op { background: #ff9f0a; }
+.btn-action { background: #a5a5a5; color: black; }
+.btn-equal { background: #ff9f0a; }
+.btn-sci { background: #2c2c2e; color: #a55eea; border-radius: 15px; font-size: 1rem; }
+.hidden { display: none; }
